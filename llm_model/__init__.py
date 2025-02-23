@@ -1,0 +1,1 @@
+min_lm_model = "all-MiniLM-L6-v2"
