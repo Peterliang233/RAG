@@ -9,7 +9,7 @@ def main():
     
     embedding_model = load_embedding_model(min_lm_model)
 
-    folder_path = "/Users/yanpingliang/code/python/RAG/source"
+    folder_path = "source/"
     index, chunks = indexing_process(folder_path, embedding_model)
     
     result_chunks = retrieval_process(query, index, chunks, embedding_model)
