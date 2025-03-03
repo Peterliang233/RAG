@@ -29,14 +29,16 @@ def indexing_process(folder_path, embedding_model):
             # print(f"docuemnt total length: {len(document_text)}")
             text_splitter = RecursiveCharacterTextSplitter(
                 chunk_size = 512,
-                chunk_overlap = 128
+                chunk_overlap = 128,
+                separators=["\n\n", "。", "\n", "！", "？", " ", ""],
             )
             chunks = text_splitter.split_text(document_text)
             all_chunks.extend(chunks)
-
+            
     index, chunks = embedding_data(all_chunks, embedding_model)
     
     return index, chunks
+
 
 def retrieval_process(query, index, chunks, embedding_model, top_k = 3):
     query_embedding = embedding_model.encode(query, normalize_before=True)
