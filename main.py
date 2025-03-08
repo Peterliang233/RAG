@@ -3,7 +3,7 @@ from llm_model.embedding_model import load_embedding_model
 from llm_model import min_lm_model
 from retrieval.embedding import indexing_process, retrieval_process
 from generator.generate import generate_answer
-from database.chroma import ChromaDB
+from database.chroma.chroma import ChromaDB
 
 def faiss_main():
     query = "介绍一下MapReduce"
