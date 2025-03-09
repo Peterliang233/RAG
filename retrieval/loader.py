@@ -11,7 +11,6 @@ from langchain_community.document_loaders import (
 )
 
 import os
-from utils.obj import format_json
 
 def load_document(file_path):
     DOCUMENT_LOADER_MAPPING = {
