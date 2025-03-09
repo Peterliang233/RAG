@@ -6,4 +6,6 @@
 + chunk_size: 512
 + chunk_overlap: 20
 # VectorStore
-+ chroma
++ chroma: 
++ faiss: 
++ milvus:

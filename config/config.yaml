@@ -1,0 +1,8 @@
+database:
+  chroma:
+    chroma_db_path: "database/chroma/data"
+llm:
+  embedding_model: "all-MiniLM-L6-v2"
+  model: "qwen-turbo"
+  api_key: "" # ignore, don't set your key in here
+resource_folder_path: "resources/"

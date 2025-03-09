@@ -1,17 +1,15 @@
 
-from config.llm_model import ali_api_key, qwen_model
 import dashscope
+from config import AppConfig
 from http import HTTPStatus
-dashscope.api_key = ali_api_key
 
-
-def generate_answer(query, chunks):
-    llm_model = qwen_model
-    dashscope.api_key = ali_api_key
+def generate_answer(query, doc_chunks):
+    llm_model = AppConfig.llm.model
+    dashscope.api_key = AppConfig.llm.api_key
 
     context = ""
-    for i, chunks in enumerate(chunks):
-        context += f"参考文档{i+1}:\n{chunks}\n\n"
+    for i, chunk in enumerate(doc_chunks):
+        context += f"参考文档{i+1}:\n{chunk}\n\n"
     
     prompt = f"根据参考文档回答问题:{query}\n\n{context}"
     print(f"prompt:{prompt}")
