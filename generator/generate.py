@@ -1,11 +1,11 @@
 
 import dashscope
-from config import AppConfig
+from config import app_config
 from http import HTTPStatus
 
 def generate_answer(query, doc_chunks):
-    llm_model = AppConfig.llm.model
-    dashscope.api_key = AppConfig.llm.api_key
+    llm_model = app_config.llm.model
+    dashscope.api_key = app_config.llm.api_key
 
     context = ""
     for i, chunk in enumerate(doc_chunks):

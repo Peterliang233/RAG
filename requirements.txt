@@ -1,6 +1,9 @@
-chromadb==0.6.3
+chromadb==0.5.23
 dashscope==1.22.2
 langchain_community==0.3.19
 langchain_text_splitters==0.3.6
-numpy==1.24.4
+numpy==2.2.3
+pydantic==2.10.6
+PyYAML==6.0.2
+PyYAML==6.0.2
 sentence_transformers==3.2.1
